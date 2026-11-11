@@ -86,14 +86,14 @@ jupyter notebook notebooks/IA_de_score_de_credito.ipynb
 
 Acurácia no conjunto de teste:
 
-| Divisão treino/teste | Random Forest | KNN |
-|---|---|---|
-| Por linha (como na primeira versão) | 80,3% | 76,0% |
-| **Por cliente (versão atual)** | **64,0%** | **54,9%** |
-
 O **Random Forest** é o melhor modelo e é o usado para prever os novos clientes. As variáveis que mais pesam na decisão são a dívida total, o histórico de crédito, o mix de crédito, os juros dos empréstimos e os dias de atraso.
 
-A diferença entre as duas linhas da tabela mostra por que a divisão por cliente importa. Cada cliente aparece em 8 meses com dados quase iguais. Na divisão por linha, o mesmo cliente cai no treino e no teste, e o modelo acerta parte do teste por "reconhecer" o cliente. Os ~64% da divisão por cliente são o desempenho esperado para clientes que o modelo nunca viu. O notebook mostra essa comparação.
+| Divisão treino/teste | Random Forest | KNN |
+|---|---|---|
+| Por linha | 80,3% | 76,0% |
+| **Por cliente** | **64,0%** | **54,9%** |
+
+>A diferença entre as duas linhas da tabela mostra por que a divisão por cliente importa. Cada cliente aparece em 8 meses com dados quase iguais. Na divisão por linha, o mesmo cliente cai no treino e no teste, e o modelo acerta parte do teste por "reconhecer" o cliente. Os ~64% da divisão por cliente são o desempenho esperado para clientes que o modelo nunca viu. O notebook mostra essa comparação.
 
 ## Licença
 
